@@ -1,9 +1,12 @@
-const Header=(props)=>{
+import Link from "next/link"
+const Header=()=>{
     
     return(
         <>
-            <h1>{props.state}</h1>
-            <h1>{props.stay}</h1>
+            <div style={{width: "100%", display: "flex", justifyContent: "center", alignItems:"center", gap:"20px"}}>
+            <Link href="/">Home</Link>
+            <Link href="/about">About</Link>
+            </div>
         </>
     )
 };

@@ -1,13 +1,22 @@
 import Header from "@/components/Header"
+import Link from "next/link"
 
 export default function Layout({children}){
-    const state = "Chima"
+    const theStyle={width: "50%",
+     display: "flex", 
+     justifyContent: "center", 
+     alignItems:"center", 
+     gap:"20px"
+    }
+    
     return(
         <div>
-            <Header state={state} stay={5}/>
+            <h1>Layout for About Pages</h1>
+            <div style={theStyle}>
+            <Link href="/about/story">Story</Link>
+            <Link href="/about/vision">Vision</Link>
+            </div>
             {children}
-            <h1>This is the Layout on all About Pages</h1>
-            
         </div>
     )
 }

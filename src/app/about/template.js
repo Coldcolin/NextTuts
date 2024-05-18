@@ -1,15 +1,14 @@
 'use client'
-import henry from "./about.module.css"
+import styles from "./about.module.css"
 import { usePathname } from 'next/navigation'
 
 export default function Template({ children }) {
     const pathname = usePathname()
-    console.log(pathname)
+   
     return (
     <div>
-        <h3 style={pathname == "/about/vision"? {color: "yellow"}: {color: "green"}}>This is the template</h3>
+        <h3>This is the template for {pathname} in about page</h3>
         {children}
-        <p className={pathname == "/about/vision"? henry.theA: henry.theP}>{pathname}</p>
     </div>
     )
   }
